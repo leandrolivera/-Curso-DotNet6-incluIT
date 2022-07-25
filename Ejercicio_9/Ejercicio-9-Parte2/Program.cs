@@ -14,7 +14,6 @@ así sucesivamente hasta la última columna la cual contiene del 80 al 90
 */
 
 Console.WriteLine("Bienvenido al BINGO!");
-// Petición de datos (cantidad de filas y cantidad de columnas)
 Console.WriteLine("Estamos generando su nuevo cartón para el juego...");
 Console.ReadKey();
 int cantidadFilas = 3;
@@ -22,40 +21,83 @@ int cantidadColumnas = 9;
 int cantNumeros = 15;
 int cantEspacios = 12;
 Random random = new Random();
-Boolean booleano;
 
 int[] lugaresNumeros = new int[5];
-for (int i = 0; i < lugaresNumeros.Length; i++)
-{
-    do
-    {
-        lugaresNumeros[i] = random.Next(0, 8);
-    } while (!lugaresNumeros.Contains(lugaresNumeros[i]));
-    Console.WriteLine(lugaresNumeros[i]);
-}
+int[] comprobarRepetidos = { -1, -1, -1, -1, -1 };
+
+
 // Definición de la matriz.
 int[,] numeros = new int[cantidadFilas, cantidadColumnas];
-Console.WriteLine("Los valores del vector son: ");
+Console.WriteLine("\n");
 for (int i = 0; i < cantidadFilas; i++)
 {
     Console.Write("[");
-    if (i == 0)
+    lugaresNumeros = new int[5];
+
+    for (int j = 0; j < lugaresNumeros.Length; j++)
     {
-        Console.Write(random.Next(1, 2));
+        do
+        {
+            lugaresNumeros[j] = random.Next(0, 9);
+        } while (comprobarRepetidos.Contains(lugaresNumeros[j]));
+        comprobarRepetidos[j] = lugaresNumeros[j];
     }
     for (int j = 0; j < cantidadColumnas; j++)
     {
-        numeros[i, j] = 0;
+        for (int k = 0; k < lugaresNumeros.Length; k++)
+        {
+            if (lugaresNumeros[k] == 0)
+            {
+                numeros[i, lugaresNumeros[k]] = random.Next(1, 10);
+            }
+            else if (lugaresNumeros[k] == 1)
+            {
+                numeros[i, lugaresNumeros[k]] = random.Next(10, 20);
+            }
+            else if (lugaresNumeros[k] == 2)
+            {
+                numeros[i, lugaresNumeros[k]] = random.Next(20, 30);
+            }
+            else if (lugaresNumeros[k] == 3)
+            {
+                numeros[i, lugaresNumeros[k]] = random.Next(30, 40);
+            }
+            else if (lugaresNumeros[k] == 4)
+            {
+                numeros[i, lugaresNumeros[k]] = random.Next(40, 50);
+            }
+            else if (lugaresNumeros[k] == 5)
+            {
+                numeros[i, lugaresNumeros[k]] = random.Next(50, 60);
+            }
+            else if (lugaresNumeros[k] == 6)
+            {
+                numeros[i, lugaresNumeros[k]] = random.Next(60, 70);
+            }
+            else if (lugaresNumeros[k] == 7)
+            {
+                numeros[i, lugaresNumeros[k]] = random.Next(70, 80);
+            }
+            else if (lugaresNumeros[k] == 8)
+            {
+                numeros[i, lugaresNumeros[k]] = random.Next(80, 91);
+            }
+            else
+            {
+                numeros[i, lugaresNumeros[k]] = 0;
+            }
+        }
         //Console.Write($"{numeros[i,j]} ");
         if (numeros.GetUpperBound(1) == j)
         {
-            Console.Write($"{numeros[i, j]}");
+            Console.Write($" {numeros[i, j]} ");
         }
         else
         {
-            Console.Write($"{numeros[i,j]}, ");
+            Console.Write($" {numeros[i, j]} , ");
         }
     }
+
     Console.WriteLine("]");
 }
 

@@ -8,24 +8,26 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/home/sectorial/.nuget/packages/": {}
+    "C:\\Users\\Leo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/sectorial/Curso-DotNet6-incluIT/Ejercicio_9/Ejercicio-9-Parte2/Ejercicio-9-Parte2.csproj",
-      "projectName": "Ejercicio-9-Parte2",
-      "projectPath": "/home/sectorial/Curso-DotNet6-incluIT/Ejercicio_9/Ejercicio-9-Parte2/Ejercicio-9-Parte2.csproj",
-      "packagesPath": "/home/sectorial/.nuget/packages/",
-      "outputPath": "/home/sectorial/Curso-DotNet6-incluIT/Ejercicio_9/Ejercicio-9-Parte2/obj/",
+      "projectUniqueName": "C:\\Users\\Leo\\Desktop\\Dev\\Curso-DotNet6-incluIT\\Ejercicio-9-Parte-2\\Ejercicio-9-Parte-2.csproj",
+      "projectName": "Ejercicio-9-Parte-2",
+      "projectPath": "C:\\Users\\Leo\\Desktop\\Dev\\Curso-DotNet6-incluIT\\Ejercicio-9-Parte-2\\Ejercicio-9-Parte-2.csproj",
+      "packagesPath": "C:\\Users\\Leo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Leo\\Desktop\\Dev\\Curso-DotNet6-incluIT\\Ejercicio-9-Parte-2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/sectorial/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Leo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -58,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
